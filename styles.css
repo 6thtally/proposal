@@ -1,0 +1,197 @@
+/* Background video */
+.bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* Container */
+.proposal-container {
+  max-width: 700px;
+  margin: 80px auto;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.proposal-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff0057, #af18eb, #00c2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.proposal-container p {
+  margin-bottom: 25px;
+  opacity: 0.85;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Phone number section */
+.phone-input {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+select {
+  width: 30%;
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Checkbox section */
+
+/* Checkbox section title */
+.section-label {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Checkbox container */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Checkbox labels */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkbox-group label:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(162, 0, 255, 0.5);
+}
+
+/* Fix checkbox input */
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #a200ff;
+  cursor: pointer;
+}
+
+/* Make sure it stays neat on phones */
+
+
+
+button {
+  background: linear-gradient(90deg, #ff0057, #aa14e0, #00c2ff);
+  border: none;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.back-link {
+  margin-top: 10px;
+}
+
+.back-link a {
+  color: #00c2ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .checkbox-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 400px;
+  }
+
+  .checkbox-group label {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .proposal-container {
+    width: 90%;
+    padding: 25px;
+  }
+}
